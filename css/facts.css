@@ -152,3 +152,57 @@ intro p {
     padding-left: 10px;
     padding-right: 10px;
 }
+
+
+#hat {
+  width: 130px;
+}
+
+#caption {
+   color: transparent;
+}
+
+#hat-cont:hover #caption {
+  color: var(--orange);
+  font-family: "Creepster";
+  position: fixed;
+  top: 150px;
+  left: 50px;
+  width: 100px;
+  height: 40px;
+  font-size: 13px;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  padding: 5px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transform: translate(40px, -30px);
+}
+
+#hat-cont:hover #caption::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 10px;
+  width: 0;
+  z-index: 1;
+  left: 10px;
+  border: medium solid white;
+  border-width: 15px 0 15px 15px;
+  border-color: transparent  transparent white transparent;
+  transform: rotate(45deg) translate(10px, 4px);
+}
+
+#hat-cont.active {
+  display: unset;
+  position: fixed;
+  top: 150px;
+  left: 30px;
+}
+
+#hat-cont {
+  display: none;
+}
