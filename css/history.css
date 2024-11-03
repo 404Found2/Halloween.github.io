@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&display=swap');
+
+:root {
+    --light-o: #fde5d4;
+    --orange: #F98128;
+    --c-2: #5D2586;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    font-family: Arial;
+}
+
+html {
+    background: var(--light-o);
+}
+
+body {
+    padding-top: 50px;
+    margin: 0px;
+    padding-left: 0px;
+}
+
+.imageBk {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    object-fit: cover;
+    margin-bottom: 0px !important;
+    padding: 0px;
+}
+
+menu {
+    z-index: 999999;
+    padding: 0px;
+    margin-top: 0px !important;
+    width: 100vw;
+    height: 70px;
+    background: var(--orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+menu a {
+    color: var(--c-2);
+    font-family: "Nosifer", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    box-sizing: border-box;
+    padding: 10px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+menu a:hover,
+.clicked {
+    background: var(--c-2);
+    color: var(--orange);
+    transition: 1s;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+
+/********************** START OF INTRO **********************/
+intro img {
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+    height: calc(100vh - 50px);
+    object-fit: cover;
+    position: relative;
+}
+
+intro p {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    color: white;
+    font-family: "Creepster", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 48px;
+    padding: 20px;
+    width: 100vw;
+    box-sizing: border-box;
+    text-align: center;
+    background: var(--c-2);
+}
+
+
+/********************** END OF INTRO **********************/
+
+.timeline {
+    transform: translate(0px, -5px);
+    width: 100%;
+    height: 100%;
+    margin: 0px 10px;
+}
+
+.text {
+    width: 90%;
+    background: white;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 40px 30px;
+    opacity: 0;
+    transition: 3s;
+    transform: translatey(-50px);
+}
+
+.text.active {
+    opacity: 1;
+    transform: translatey(0px);
+}
+
+.text.img {
+    background: transparent;
+    width: 50%;
+    margin: 0px auto;
+    gap: 2px;
+    display: grid;
+    grid-template-areas: "a b c" "a d d";
+}
+
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.a {
+    grid-area: a;
+}
+
+.b {
+    grid-area: b;
+}
+
+.c {
+    grid-area: c;
+}
+
+.d {
+    grid-area: d;
+}
+
+#progress {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background: var(--c-2);
+    z-index: 5;
+}
+
+.gallery {
+    width: 100%;
+    margin: 0px auto;
+    display: grid;
+    grid-template-areas: "A B C D" "A E E D" "F F F G";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 2px;
+    max-height: 100vh;
+}
+
+.capt {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background: #000000CF;
+    width: 100%;
+    padding: 0.5em;
+    font-size: 22px;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: "Nosifer", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.A,
+.B,
+.C,
+.D,
+.E,
+.F,
+.G {
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.A {
+    grid-area: A;
+}
+
+.B {
+    overflow: hidden;
+    grid-area: B;
+}
+
+.C {
+    overflow: hidden;
+    grid-area: C;
+}
+
+.D {
+    overflow: hidden;
+    grid-area: D;
+}
+
+.E {
+    overflow: hidden;
+    grid-area: E;
+}
+
+.F {
+    grid-area: F;
+    overflow: hidden;
+}
+
+.G {
+    overflow: hidden;
+    grid-area: G;
+}
+
+
+.header {
+    margin: 0px;
+    width: 100%;
+    padding: 15px;
+    color: white;
+    background: var(--c-2);
+    text-align: center;
+    font-size: 36px;
+    font-family: "Creepster", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.time {
+    font-size: 42px;
+    color: var(--orange);
+    font-family: "Creepster", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.subTime {
+    font-size: 22px;
+    color: var(--c-2);
+    font-family: "Nosifer", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.gallery1.text {
+    border-radius: 0px;
+    width: 100vw;
+    height: calc(100% + 10px);
+    background: var(--c-2);
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 0px 0px;
+    transition: 2s;
+}

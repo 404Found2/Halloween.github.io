@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&display=swap');
+
+:root {
+    --light-o: #fde5d4;
+    --orange: #F98128;
+    --c-2: #5D2586;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    font-family: Arial;
+}
+
+html {
+    background: var(--light-o);
+}
+
+body {
+    padding-top: 50px;
+    margin: 0px;
+    padding-left: 0px;
+}
+
+.imageBk {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    object-fit: cover;
+    margin-bottom: 0px !important;
+    padding: 0px;
+}
+
+menu {
+    z-index: 999999;
+    padding: 0px;
+    margin-top: 0px !important;
+    width: 100vw;
+    height: 70px;
+    background: var(--orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+menu a {
+    color: var(--c-2);
+    font-family: "Nosifer", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    box-sizing: border-box;
+    padding: 10px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+menu a:hover,
+.clicked {
+    background: var(--c-2);
+    color: var(--orange);
+    transition: 1s;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+
+/********************** START OF INTRO **********************/
+intro img {
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+    height: calc(100vh - 50px);
+    object-fit: cover;
+    position: relative;
+}
+
+intro p {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    color: white;
+    font-family: "Creepster", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 48px;
+    padding: 20px;
+    width: 100vw;
+    box-sizing: border-box;
+    text-align: center;
+    background: var(--c-2);
+}
+
+
+/********************** END OF INTRO **********************/
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+}
+
+.game {
+    width: 400px;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 40px 10px;
+    position: relative;
+    color: white;
+    background: url("../media/game-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent;
+    font-size: 32px;
+}
+
+.game:hover .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent;
+    font-family: "Creepster";
+    width: 100%;
+    height: 100%;
+    background: #00000099;
+    box-sizing: border-box;
+    padding: 25px;
+    transition: 0.5s;
+    color: white;
+}
+
+.game.tic {
+    background: url("../media/game2.png");
+    font-size: 22px;
+}
+
+.game.tic:hover .text {
+    font-family: "Nosifer";
+    font-size: 22px;
+    width: 100%;
+    height: 100%;
+    background: #00000099;
+    box-sizing: border-box;
+    padding: 25px;
+    transition: 0.5s;
+    color: white;
+}
