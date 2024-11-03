@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halloween</title>
+    <link href="./game2.css" rel="stylesheet" type="text/css" />
+
+    <script src="./game2.js" defer></script>
+
+
+</head>
+
+<menu>
+    <a href="../index.html">Home</a>
+    <a href="../history.html">History</a>
+    <a href="../facts.html">Freaky Facts</a>
+    <a href="../games.html" class="clicked">Games</a>
+</menu>
+
+<intro><img src="../media/game2.png">
+    <p>Halloween Tic-Tac-Toe</p>
+</intro>
+<main>
+    <screen id="game">
+        <div class="controls">
+            <img id="turn1" class="turnActive" src="../media/game2-ghost.png">
+            <img id="turn2" src="../media/game2-pumpkin.png">
+        </div>
+
+        <div class="board" id="board">
+            <div id="a" class="free"></div>
+            <div id="b" class="free"></div>
+            <div id="c" class="free"></div>
+
+            <div id="d" class="free"></div>
+            <div id="e" class="free"></div>
+            <div id="f" class="free"></div>
+
+            <div id="g" class="free"></div>
+            <div id="h" class="free"></div>
+            <div id="j" class="free"></div>
+        </div>
+    </screen>
+
+    <screen id="first">
+        <div class="center">Halloween Trivia!</div>
+        <div id="start0">Start</div>
+    </screen>
+
+    <screen id="pl1">
+        <div class="center">Player 1 Has Won!</div>
+        <a id="start1" href="./game2.html">Play Again</a>
+    </screen>
+
+    <screen id="pl2">
+        <div class="center">Player 2 Has Won!</div>
+        <a id="start2" href="./game2.html">Play Again</a>
+    </screen>
+
+    <screen id="pl3">
+        <div class="center">It's A Tie</div>
+        <a id="start3" href="./game2.html">Play Again</a>
+    </screen>
+
+</main>
+
+</html>

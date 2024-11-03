@@ -118,7 +118,7 @@ main {
     justify-content: center;
 }
 
-quiz {
+screen {
     width: 600px;
     height: 400px;
     background: white;
@@ -126,156 +126,111 @@ quiz {
     box-shadow: 10px 10px var(--orange);
 }
 
-#quiz {
+#game {
+    display: none;
+}
+
+.board {
+    width: 300px;
+    height: 300px;
+    text-align: center;
     display: grid;
-    grid-template-areas: "q a c";
-}
-
-.question {
-    grid-area: q;
-    font-size: 32px;
-    padding-left: 45px;
-    padding-top: 40px;
-    color: var(--c-2);
-}
-
-answer {
-    font-size: 24px;
-    grid-area: a;
-    width: 100%;
+    grid-template-areas: "a b c" "d e f" "g h i";
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    background: var(--c-2);
+    gap: 5px;
+    overflow: hidden;
     margin: auto;
+}
+
+.board .free:hover {
+    background: url("../media/game2-ghost.png"),
+        white !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+}
+
+.board.pl2 .free:hover {
+    background: url("../media/game2-pumpkin.png"), white !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+}
+
+.board div {
+    width: 100px;
+    height: 100px;
+    background: white;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
 }
 
-input {
-    accent-color: var(--orange);
+#a {
+    grid-area: a;
 
-    width: 35px;
-    height: 20px;
-    margin-bottom: 20px;
 }
 
-label.selected,
-label:hover {
-    color: var(--orange);
+#b {
+    grid-area: b;
 }
 
-options {
-    padding: 10px;
-    margin-left: 10%;
+#c {
+    grid-area: c;
+}
+
+#d {
+    grid-area: d;
+}
+
+#e {
+    grid-area: e;
+}
+
+#f {
+    grid-area: f;
+}
+
+#g {
+    grid-area: g;
+}
+
+#h {
+    grid-area: h;
+}
+
+#j {
+    grid-area: i;
+}
+
+
+.controls img {
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    border: 5px solid #00000033;
+    margin-left: 20px;
+}
+
+.turnActive {
+    border: 5px solid var(--c-2) !important;
 }
 
 .controls {
-    grid-area: c;
-    display: flex;
-    width: 100%;
-    height: 50px;
-}
-
-#back {
-    grid-area: l;
-    margin-bottom: 10px;
-    margin-left: 40px;
-}
-
-#progress {
-    grid-area: m;
-    width: 100%;
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 15px auto;
 }
 
-#next {
-    grid-area: r;
-    margin-bottom: 10px;
-    margin-right: 40px;
-}
-
-#next,
-#back {
-    background: var(--c-2);
-    border-radius: 10px;
-    width: 100px;
-    border: 0px solid black;
-    color: white;
-}
-
-.mainButton {
-    color: white;
-}
-
-.gap {
-    background: var(--c-2);
-    width: calc(100% - 50px);
-    height: 30px;
-    border-radius: 10px;
-    border: 0px solid black;
-    color: white;
-    margin: 20px auto !important;
-    padding: 5px;
-    z-index: 10000 !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-a {
-    text-decoration: none !important;
-}
-
-
-#next:hover,
-#back:hover {
-    background: var(--orange);
-    transition: 0.5s;
-}
-
-answers div {
-    background: var(--light-o);
-    padding: 2px;
-    border-radius: 5px;
-    margin: 2px 20px;
-}
-
-#ans .question {
-    font-size: 24px;
-    margin: 2px -20px;
-}
-
-#ans {
-    display: none;
-}
-
-.ans.correct {
-    background: #63C32888;
-}
-
-.ans.incorrect {
-    background: #D0282388;
-}
-
-.score.question {
-    text-align: center;
-    width: 100%;
-    font-size: 36px;
-    font-weight: 800
-}
-
-.quest {
-    padding-bottom: 10px;
-    z-index: 0;
-    margin-bottom: 0px;
-}
-
-
-#quiz {
-    display: none;
-}
-
-#first {
-    background: url("https://png.pngtree.com/thumb_back/fh260/background/20230617/pngtree-halloween-ghost-and-pumpkin-cartoon-desktop-wallpaper-image_2947814.jpg");
+#first,
+#pl3 {
+    background: url("../media/game2-start.png"), white;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    background-position: center !important;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -283,16 +238,20 @@ answers div {
 
 .center {
     width: 100%;
-    background: #000000AA;
+    background: #FFFFFFAA;
     padding: 20px;
     text-align: center;
     margin: auto;
-    color: var(--orange);
-    font-size: 48px;
+    color: var(--c-2);
+    font-family: Nosifer;
+    font-size: 32px;
 }
 
-#start0 {
-    background: var(--c-2);
+#start0,
+#start1,
+#start2,
+#start3 {
+    background: var(--orange);
     border-radius: 10px;
     width: 100px;
     height: 50px;
@@ -303,6 +262,51 @@ answers div {
     color: white;
 }
 
-#start0:hover {
+#start0:hover,
+#start1:hover,
+#start2:hover,
+#start3:hover {
+    background: var(--c-2);
+}
+
+#pl1 {
+    display: none;
+    background: url("../media/game2-ghost.png"), white !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    background-position: center !important;
+}
+
+#start1,
+#start3 {
+    margin: 220px auto 0px auto;
+    width: 200px;
+}
+
+
+#pl2 {
+    display: none;
+    background: url("../media/game2-pumpkin.png"), white !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    background-position: center !important;
+}
+
+#pl3 {
+    display: none;
+}
+
+#pl2 .center,
+#pl3 .center {
+    color: var(--orange);
+}
+
+#start2 {
+    margin: 220px auto 0px auto;
+    width: 200px;
+    background: var(--c-2);
+}
+
+#start2:hover {
     background: var(--orange);
 }
