@@ -51,5 +51,6 @@ Why stop at two games when you can have more? Halloween! is hoping to be able to
 | Nosifer |
 | Arial |
 
-##Try It Out
+##Try It Out:
+
 [https://404found2.github.io/Halloween.github.io/](https://404found2.github.io/Halloween.github.io/)
