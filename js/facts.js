@@ -15,3 +15,18 @@ var sponsors = document.querySelectorAll(".fact");
 
 // Loop over the elements and add each one to the observer
 sponsors.forEach((element) => observer.observe(element));
+
+//////////////Randomize Hat///////////
+setInterval(toggle, 10000)
+
+var sayingArray = ["I was a Witch this Halloween!", "How was your Halloween?", "Want to know my costume?"];
+
+var displayHat = document.getElementById("hat-cont");
+var capt = document.getElementById("caption");
+
+function toggle() {
+    displayHat.classList.toggle("active");
+    var num = Math.floor(Math.random() * sayingArray.length);
+    console.log(num);
+    capt.innerHTML = sayingArray[num];
+}
