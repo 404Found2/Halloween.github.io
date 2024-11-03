@@ -27,6 +27,5 @@ var capt = document.getElementById("caption");
 function toggle() {
     displayHat.classList.toggle("active");
     var num = Math.floor(Math.random() * sayingArray.length);
-    console.log(num);
     capt.innerHTML = sayingArray[num];
 }
